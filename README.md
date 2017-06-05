@@ -8,3 +8,7 @@ Here is the output of this project:
 Part 1:
 
 ![](http://luthfifr.com/buku_ios_101/gif/viewController/vc_imageView.gif)
+
+Part 2:
+
+![](http://luthfifr.com/buku_ios_101/gif/viewController/vc_imageView2.gif)
