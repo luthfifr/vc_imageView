@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         btn_hapus.layer.cornerRadius = 5
         
         gambar_internal.image = UIImage(named: "furious8")
-        gambar_internal.contentMode = UIViewContentMode.scaleAspectFit
+        gambar_internal.contentMode = UIView.ContentMode.scaleAspectFit
         
     }
 
@@ -55,8 +55,8 @@ class ViewController: UIViewController {
     }
     
     func noImageAlert() {
-        let alertStatus = UIAlertController (title: "Message", message: "No Image in UIImageView. Please insert a URL to download an image.", preferredStyle: UIAlertControllerStyle.alert)
-        alertStatus.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default,handler:  nil))
+        let alertStatus = UIAlertController (title: "Message", message: "No Image in UIImageView. Please insert a URL to download an image.", preferredStyle: UIAlertController.Style.alert)
+        alertStatus.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default,handler:  nil))
         self.present(alertStatus, animated: true, completion: nil)
     }
     
@@ -64,12 +64,12 @@ class ViewController: UIViewController {
 }
 
 extension UIImageView {
-    func downloadedFrom(link: String, contentMode mode: UIViewContentMode = .scaleAspectFit) {
+    func downloadedFrom(link: String, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
         guard let url = URL(string: link) else { return }
         downloadedFrom(url: url, contentMode: mode)
     }
     
-    func downloadedFrom(url: URL, contentMode mode: UIViewContentMode = .scaleAspectFit) {
+    func downloadedFrom(url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
         contentMode = mode
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard
